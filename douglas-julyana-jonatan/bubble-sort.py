@@ -16,6 +16,8 @@ for i in range(0, N-1, 1): #Andando do primeiro elemento até o penultimo de 1 e
             lista[i] = lista[j]
             lista[j] = temp
 print("lista em ordem crescente", lista) #para imprimir a lista em ordem crescente com modificações
+print("cinco menores valores", lista[0:5]) #usamos esse comando para imprimir apenas os cinco menores valores da lista em ordem crescente, e o nomeamos como 'cinco menores valores'
+print("cinco maiores valores", lista[15:20]) #usamos esse comando para imprimir apenas os cinco maiores valores da lista em ordem crescente, e o nomeamos como 'cinco maiores valores'
 
 #Para selecionar o primeiro elemento da lista 'lista[0]'
 #Para selecionar os cincos primeiros elementos da lista 'lista[0:4]'
