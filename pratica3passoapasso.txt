@@ -84,6 +84,31 @@ plt.close()
 29. Dei um commit com o comando '$ git commit -m "Fiz dois gráficos, um da lista original e outro da lista em ordem crescente, e salvei as imagens na pasta
 fig, a partir do python, rastreei as imagens e o arquivo.bubble-sort.py"
 30. Empurrei para o repositório com o comando '$ git push origin master'
+31. Trocamos o membro do grupo para julyana, e com o comado '$ git pull origin master' atualizei a minha pasta
+32. Modifiquei o arquivo fig para a fazer os gráficos para quando houvesse troca com os comandos no python:
+a = 0
+N = 20 #Numero de Elementos
+for i in range(0, N-1, 1): #Andando do primeiro elemento até o penultimo de 1 em 1
+    for j in range(i+1, N, 1): #Andando do elemento seguinte a 'i' até o ultimo de 1 em 1
+        if lista[i] < lista[j]:
+            continue
+        else:
+            temp = lista[i] #Para inverter os valores
+            lista[i] = lista[j]
+            lista[j] = temp
+            plt.figure()
+            plt.plot(range(0,20), lista, 'ok')
+            plt.title("Lista Em Cada Troca")
+            plt.xlabel("Posição na lista")
+            plt.ylabel("Valores da lista")        
+            a = a + 1
+            plt.savefig("bubble-troca{}.png".format(a))
+			plt.close()
+33. Adicionamos todos os gráficos no bash com o comando '$ git add fig'
+34. Configurei com os comandos '$ git config user.name "julyana"' e '$ git config user.email julyanamarapodi@gmail'
+35. Utilizei o comando '$ git commit -m "gráficos quando houver troca foram acrescentados"
+36. '$ git push origin master' para enviar as atualizações para o Repositório
+
 
 
 
