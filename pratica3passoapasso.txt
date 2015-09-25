@@ -108,6 +108,27 @@ for i in range(0, N-1, 1): #Andando do primeiro elemento até o penultimo de 1 e
 34. Configurei com os comandos '$ git config user.name "julyana"' e '$ git config user.email julyanamarapodi@gmail'
 35. Utilizei o comando '$ git commit -m "gráficos quando houver troca foram acrescentados"
 36. '$ git push origin master' para enviar as atualizações para o Repositório
+37. Trocamos o membro do grupo para o Jonatan e entramos na pasta dele '$ cd jonatan'
+38. Alteramos o bubble-sort.py para a configuração dos gráficos:
+import matplotlib.pyplot as plt
+lista = [11, 18, 3, 1, 16, 12, 6, 19, 5, 0, 14, 4, 17, 9, 13, 7, 10, 15, 2, 8] #Valores da Lista
+a = 0
+N = 20 #Numero de Elementos
+for i in range(0, N-1, 1): #Andando do primeiro elemento até o penultimo de 1 em 1
+    for j in range(i+1, N, 1): #Andando do elemento seguinte a 'i' até o ultimo de 1 em 1
+        plt.figure()
+        plt.plot(range(0,20), lista, 'ok')
+        plt.plot(i, lista[i], 'or') #Marcar em vermelho a carta i
+        plt.plot(j, lista[j], 'ob') #Marvar em azul a carta j
+        plt.title("Lista Em Todas as Trocas")
+        plt.xlabel("Posição na lista")
+        plt.ylabel("Valores da lista")        
+        a = a + 1
+        plt.savefig("bubble-it{}.png".format(a))
+        plt.close()
+39. Adicionamos o arquivo bubble-sort.py mais atualizado
+40. Fizemos um commit
+41. Demos o git push
 
 
 

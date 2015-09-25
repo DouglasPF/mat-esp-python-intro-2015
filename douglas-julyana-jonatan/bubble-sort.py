@@ -28,12 +28,14 @@ for i in range(0, N-1, 1): #Andando do primeiro elemento até o penultimo de 1 e
     for j in range(i+1, N, 1): #Andando do elemento seguinte a 'i' até o ultimo de 1 em 1
         plt.figure()
         plt.plot(range(0,20), lista, 'ok')
-        plt.plot(i, lista)
-        plt.title("Lista Em Cada Troca")
+        plt.plot(i, lista[i], 'or') #Marcar em vermelho a carta i
+        plt.plot(j, lista[j], 'ob') #Marvar em azul a carta j
+        plt.title("Lista Em Todas as Trocas")
         plt.xlabel("Posição na lista")
         plt.ylabel("Valores da lista")        
         a = a + 1
-        plt.savefig("bubble-troca{}.png".format(a))
+        plt.savefig("bubble-it{}.png".format(a))
+        plt.close()
         if lista[i] < lista[j]:
             continue
         else:
