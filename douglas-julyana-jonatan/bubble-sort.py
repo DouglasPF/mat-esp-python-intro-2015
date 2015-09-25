@@ -26,6 +26,14 @@ a = 0
 N = 20 #Numero de Elementos
 for i in range(0, N-1, 1): #Andando do primeiro elemento até o penultimo de 1 em 1
     for j in range(i+1, N, 1): #Andando do elemento seguinte a 'i' até o ultimo de 1 em 1
+        plt.figure()
+        plt.plot(range(0,20), lista, 'ok')
+        plt.plot(i, lista)
+        plt.title("Lista Em Cada Troca")
+        plt.xlabel("Posição na lista")
+        plt.ylabel("Valores da lista")        
+        a = a + 1
+        plt.savefig("bubble-troca{}.png".format(a))
         if lista[i] < lista[j]:
             continue
         else:
@@ -39,6 +47,7 @@ for i in range(0, N-1, 1): #Andando do primeiro elemento até o penultimo de 1 e
             plt.ylabel("Valores da lista")        
             a = a + 1
             plt.savefig("bubble-troca{}.png".format(a))
+            plt.close()
 print("lista em ordem crescente", lista) #para imprimir a lista em ordem crescente com modificações
 plt.figure() 
 plt.plot(range(0,20), lista, 'ok')
