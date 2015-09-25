@@ -21,9 +21,8 @@ plt.savefig("bubble-inicio.png")
 #Salvamos a figura
 plt.close()
 #Fechamos a figura
-
-
 print("lista original", lista) #para imprimir a lista original sem modificações
+a = 0
 N = 20 #Numero de Elementos
 for i in range(0, N-1, 1): #Andando do primeiro elemento até o penultimo de 1 em 1
     for j in range(i+1, N, 1): #Andando do elemento seguinte a 'i' até o ultimo de 1 em 1
@@ -33,6 +32,13 @@ for i in range(0, N-1, 1): #Andando do primeiro elemento até o penultimo de 1 e
             temp = lista[i] #Para inverter os valores
             lista[i] = lista[j]
             lista[j] = temp
+            plt.figure()
+            plt.plot(range(0,20), lista, 'ok')
+            plt.title("Lista Em Cada Troca")
+            plt.xlabel("Posição na lista")
+            plt.ylabel("Valores da lista")        
+            a = a + 1
+            plt.savefig("bubble-troca{}.png".format(a))
 print("lista em ordem crescente", lista) #para imprimir a lista em ordem crescente com modificações
 plt.figure() 
 plt.plot(range(0,20), lista, 'ok')
