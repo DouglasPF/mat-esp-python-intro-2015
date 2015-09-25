@@ -36,4 +36,56 @@ print("cinco maiores valores", lista[15:20]) respectivamente
 20. Fiz um commit com o comando $ git commit -m "modifiquei o arquivo para imprimir a lista original e em ordem crescente"
 21. Empurrei a versão mais atual com o comando '$ git push origin master' 
 
+Tarefa 2
+22. Trocamos o membro(Douglas) e entramos no clone com o comando '$ cd douglaspf'
+23. Com o comando '$ git pull origin master' para atualizar o repositório
+24. Criamos uma pasta chamada fig dentro do repositório douglaspf
+25. Modificamos o programa para fazer um gráfico com os comandos:
+ 
+import matplotlib.pyplot as plt
+lista = [11, 18, 3, 1, 16, 12, 6, 19, 5, 0, 14, 4, 17, 9, 13, 7, 10, 15, 2, 8] #Valores da Lista
+plt.figure() 
+#Criamos uma figura vazia
+plt.plot(range(0,20), lista, 'ok')
+#Definimos x como 'range(0,20)' e y como a lista original, antes de ser modificada pelo algoritmo
+plt.title("Lista Original")
+#Título do Gráfico
+plt.xlabel("Posição na lista")
+#Nomeamos X
+plt.ylabel("Valores da lista")
+#Nomeamos Y
+plt.savefig("bubble-inicio.png")
+#Salvamos a figura
+plt.close()
+#Fechamos a figura
+
+26. Agora modificamos novamente o programa, para fazer um gráfico agora com os valores da lista em ordem crescente, apenas repetindo o comando
+depois do algoritmo:
+N = 20
+for i in range(0, N-1, 1): 
+    for j in range(i+1, N, 1): 
+        if lista[i] < lista[j]:
+            continue
+        else:
+            temp = lista[i] #Para inverter os valores
+            lista[i] = lista[j]
+            lista[j] = temp
+print("lista em ordem crescente", lista)
+plt.figure() 
+plt.plot(range(0,20), lista, 'ok')
+plt.title("Lista Em Ordem Crescente")
+plt.xlabel("Posição na lista")
+plt.ylabel("Valores da lista")
+plt.savefig("bubble-fim.png")
+plt.close()
+
+27. Rastreamos os arquivos pratica3passoapasso.txt, bubble-fim.png, bubble-inicio.png e bubble-sort.py com o comando "$ git add 'arquivo'"
+28. Configurei com os dados do usuario com o comando '$ git config user.name "douglas parreira"' e '$ git config user.email douglaspfreitas@live'
+29. Dei um commit com o comando '$ git commit -m "Fiz dois gráficos, um da lista original e outro da lista em ordem crescente, e salvei as imagens na pasta
+fig, a partir do python, rastreei as imagens e o arquivo.bubble-sort.py"
+30. Empurrei para o repositório com o comando '$ git push origin master'
+
+
+
+
 
